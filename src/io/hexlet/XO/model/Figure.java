@@ -1,7 +1,7 @@
 package io.hexlet.XO.model;
 
-public class Figure {
+public enum Figure {
 
-    Enum X, O;
+    X, O;
 
 }
