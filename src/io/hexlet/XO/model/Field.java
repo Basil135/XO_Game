@@ -19,7 +19,7 @@ public class Field {
 
     }
 
-    public Figure getfigure(Point point) {
+    public Figure getfigure(final Point point) {
 
         Figure figure;
         figure = field[point.getX()][point.getY()];
@@ -27,7 +27,7 @@ public class Field {
 
     }
 
-    public void setfigure(Point point, Figure figure) {
+    public void setfigure(final Point point, final Figure figure) {
 
         field[point.getX()][point.getY()] = figure;
 
