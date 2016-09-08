@@ -8,9 +8,10 @@ public class MoveController {
 
     public void applyFigure(final Field field,
                             final Point point,
-                            final Figure figure) throws InvalidPointException, AlreadyPointExistException {
+                            final Figure figure) throws InvalidPointException,
+                                                        AlreadyPointExistException {
 
-        if ((point.getX() < 0 || point.getX() >= field.getsize()) || (point.getY() < 0 || point.getY() > field.getsize())) {
+        if ((point.getX() < 0 || point.getX() >= field.getsize()) || (point.getY() < 0 || point.getY() >= field.getsize())) {
             throw new InvalidPointException();
         }
 
