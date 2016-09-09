@@ -114,7 +114,7 @@ public class MoveControllerTestException {
         Field field = new Field();
 
         Figure testValue = Figure.X;
-        for (int i = 0; i < field.getsize(); i++) {
+        for (int i = 0; i < field.getSize(); i++) {
 
             checkRow(field, moveController, testValue, i);
 
@@ -129,11 +129,11 @@ public class MoveControllerTestException {
                           int i) throws InvalidPointException,
                                         AlreadyPointExistException {
 
-        for (int j = 0; j < field.getsize(); j++) {
+        for (int j = 0; j < field.getSize(); j++) {
 
             Point point = new Point(i, j);
 
-            field.setfigure(point, figure);
+            field.setFigure(point, figure);
 
             moveController.applyFigure(field, point, figure);
 
