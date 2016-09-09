@@ -12,14 +12,14 @@ public class FieldTest {
         Field field = new Field();
         int testValue = 3;
         int expectedValue = testValue;
-        int actualValue = field.getsize();
+        int actualValue = field.getSize();
         assertEquals(expectedValue, actualValue);
 
         for (int i = 4; i < 100; i++) {
             Field field1 = new Field(i);
             testValue = i;
             expectedValue = testValue;
-            actualValue = field1.getsize();
+            actualValue = field1.getSize();
             assertEquals(expectedValue, actualValue);
         }
 
@@ -30,29 +30,29 @@ public class FieldTest {
 
         Field field = new Field();
 
-        for (int i = 0; i < field.getsize(); i++) {
-            for (int j = 0; j < field.getsize(); j++) {
+        for (int i = 0; i < field.getSize(); i++) {
+            for (int j = 0; j < field.getSize(); j++) {
                 Point point = new Point(i, j);
-                Figure actualFigure = field.getfigure(point);
+                Figure actualFigure = field.getFigure(point);
                 assertNull(actualFigure);
             }
         }
 
-        for (int i = 0; i < field.getsize(); i++) {
+        for (int i = 0; i < field.getSize(); i++) {
             checkrow(field, i, Figure.X);
         }
 
-        for (int i = 0; i < field.getsize(); i++) {
+        for (int i = 0; i < field.getSize(); i++) {
             checkrow(field, i, Figure.O);
         }
     }
 
     private void checkrow(Field field, int i, Figure figure) {
-        for (int j = 0; j < field.getsize(); j++) {
+        for (int j = 0; j < field.getSize(); j++) {
             Point point = new Point(i, j);
-            field.setfigure(point,figure);
+            field.setFigure(point,figure);
             Figure expectedFigure = figure;
-            Figure actualFigure = field.getfigure(point);
+            Figure actualFigure = field.getFigure(point);
             assertEquals(expectedFigure, actualFigure);
         }
     }
