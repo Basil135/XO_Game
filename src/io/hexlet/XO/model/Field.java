@@ -13,13 +13,13 @@ public class Field {
 
     public Field() {}
 
-    public int getsize() {
+    public int getSize() {
 
         return this.size;
 
     }
 
-    public Figure getfigure(final Point point) {
+    public Figure getFigure(final Point point) {
 
         Figure figure;
         figure = field[point.getX()][point.getY()];
@@ -27,7 +27,7 @@ public class Field {
 
     }
 
-    public void setfigure(final Point point, final Figure figure) {
+    public void setFigure(final Point point, final Figure figure) {
 
         field[point.getX()][point.getY()] = figure;
 
