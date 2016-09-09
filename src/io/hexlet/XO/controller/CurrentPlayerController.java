@@ -12,12 +12,12 @@ public class CurrentPlayerController {
 
     public Figure checkMove(Field field) {
 
-        for (int i = 0; i < field.getsize(); i++) {
+        for (int i = 0; i < field.getSize(); i++) {
 
             checkRow(field, i);
 
         }
-
+        if (countX + countO == field.getSize() * field.getSize()) {return null;}
         if (countO < countX) {return Figure.O;}
         else {return Figure.X;}
 
@@ -37,11 +37,11 @@ public class CurrentPlayerController {
 
     private void checkRow(Field field, int i) {
 
-        for (int j = 0; j < field.getsize(); j++) {
+        for (int j = 0; j < field.getSize(); j++) {
 
-            if (field.getfigure(new Point(i, j)) == Figure.X) {countX++;}
+            if (field.getFigure(new Point(i, j)) == Figure.X) {countX++;}
 
-            if (field.getfigure(new Point(i, j)) == Figure.O) {countO++;}
+            if (field.getFigure(new Point(i, j)) == Figure.O) {countO++;}
 
         }
 
