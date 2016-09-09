@@ -19,7 +19,7 @@ public class MoveControllerTest {
 
         Figure testValue = Figure.X;
 
-        for (int i = 0; i < field.getsize(); i++) {
+        for (int i = 0; i < field.getSize(); i++) {
 
             checkRow(field, moveController, i, testValue);
 
@@ -29,7 +29,7 @@ public class MoveControllerTest {
 
         testValue = Figure.O;
 
-        for (int i = 0; i < field1.getsize(); i++) {
+        for (int i = 0; i < field1.getSize(); i++) {
 
             checkRow(field1, moveController, i, testValue);
 
@@ -39,7 +39,7 @@ public class MoveControllerTest {
 
     private void checkRow(Field field, MoveController moveController, int i, Figure testValue) throws InvalidPointException, AlreadyPointExistException {
 
-        for (int j = 0; j < field.getsize(); j++) {
+        for (int j = 0; j < field.getSize(); j++) {
 
             Point point = new Point(i, j);
 
@@ -47,7 +47,7 @@ public class MoveControllerTest {
 
             moveController.applyFigure(field, point, testValue);
 
-            Figure actualValue = field.getfigure(point);
+            Figure actualValue = field.getFigure(point);
 
             assertEquals(expectedValue, actualValue);
         }
