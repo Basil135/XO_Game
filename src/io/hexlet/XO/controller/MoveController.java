@@ -11,15 +11,15 @@ public class MoveController {
                             final Figure figure) throws InvalidPointException,
                                                         AlreadyPointExistException {
 
-        if ((point.getX() < 0 || point.getX() >= field.getsize()) || (point.getY() < 0 || point.getY() >= field.getsize())) {
+        if ((point.getX() < 0 || point.getX() >= field.getSize()) || (point.getY() < 0 || point.getY() >= field.getSize())) {
             throw new InvalidPointException();
         }
 
-        if (field.getfigure(point) != null) {
+        if (field.getFigure(point) != null) {
             throw new AlreadyPointExistException();
         }
 
-        field.setfigure(point, figure);
+        field.setFigure(point, figure);
 
     }
 
