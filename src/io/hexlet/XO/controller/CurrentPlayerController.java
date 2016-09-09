@@ -6,15 +6,15 @@ import io.hexlet.XO.model.Point;
 
 public class CurrentPlayerController {
 
+    private int countX = 0;
+
+    private int countO = 0;
+
     public Figure checkMove(Field field) {
-
-        int countX = 0;
-
-        int countO = 0;
 
         for (int i = 0; i < field.getsize(); i++) {
 
-            checkRow(field, i, countX, countO);
+            checkRow(field, i);
 
         }
 
@@ -23,7 +23,19 @@ public class CurrentPlayerController {
 
     }
 
-    private void checkRow(Field field, int i, int countX, int countO) {
+    public int getCountX() {
+
+        return countX;
+
+    }
+
+    public int getCountO() {
+
+        return countO;
+
+    }
+
+    private void checkRow(Field field, int i) {
 
         for (int j = 0; j < field.getsize(); j++) {
 
